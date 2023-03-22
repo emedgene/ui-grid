@@ -349,7 +349,8 @@
             $scope.handleClick = function(event) {
               // If the shift key is being held down, add this column to the sort
               // Sort this column then rebuild the grid's rows
-              uiGridCtrl.grid.sortColumn($scope.col, event.shiftKey)
+              var sort = event.shiftKey || uiGridCtrl.grid.options.allowSortOnColumnHeaderClickOnly;
+              uiGridCtrl.grid.sortColumn($scope.col, sort)
                 .then(function () {
                   if (uiGridCtrl.columnMenuScope) { uiGridCtrl.columnMenuScope.hideMenu(); }
                   uiGridCtrl.grid.refresh();
