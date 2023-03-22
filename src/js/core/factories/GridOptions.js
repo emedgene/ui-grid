@@ -64,6 +64,19 @@ angular.module('ui.grid')
        */
       baseOptions.onRegisterApi = baseOptions.onRegisterApi || angular.noop();
 
+
+       /**
+       * @ngdoc boolean
+       * @name allowSortOnColumnHeaderClickOnly
+       * @propertyOf ui.grid.class:GridOptions
+       * @description Indicate if the click on column header will add this column to sorted columns without required to hold shift. If this property is false,
+       * in order to add a new column to sorted columns, the user must hold shift key pressed and click the column header (this is existing behaviour before
+       * adding this property).
+       *
+       * This property is added in order to simplify the user experience.
+      */
+      baseOptions.allowSortOnColumnHeaderClickOnly = baseOptions.allowSortOnColumnHeaderClickOnly || false;
+
       /**
        * @ngdoc object
        * @name data

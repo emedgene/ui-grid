@@ -10,7 +10,10 @@
     "postinstall": "grunt shell:protractor-install",
     "init": "validate-commit-msg",
     "test": "grunt",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "pre-build": "grunt clean",
+    "build": "grunt build",
+    "post-build": "grunt uidocs-generator copy:site copy:font_dist copy:less_customizer copy:less_dist copy:packages_dist copy:packages_publish"
   },
   "repository": {
     "type": "git",

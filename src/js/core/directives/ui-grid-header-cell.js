@@ -341,7 +341,8 @@
             $scope.handleClick = function(event) {
               // If the shift key is being held down, add this column to the sort
               var add = false;
-              if (event.shiftKey) {
+              var sort = event.shiftKey || uiGridCtrl.grid.options.allowSortOnColumnHeaderClickOnly;
+              if (sort) {
                 add = true;
               }
 
