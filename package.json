@@ -41,6 +41,7 @@
     "canonical-path": "0.0.2",
     "coveralls": "^2.11.1",
     "cz-conventional-changelog": "^1.1.5",
+    "grunt-cli": "~1.0",
     "grunt": "~0.4",
     "grunt-angular-templates": "~0.5",
     "grunt-bump": "^0.7.0",
